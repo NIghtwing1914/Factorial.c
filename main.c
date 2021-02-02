@@ -1,21 +1,11 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<time.h>
-
-
-long long int hash[100];
+#include <time.h>
+#include <stdio.h>
 
 long long int factorial(long long int i){
-    if(i<=1){
-      return i;
-    }
-
-    if(hash[i]){
-      return hash[i];
-    }
-
-    hash[i]=i*factorial(i-1);
-    return hash[i];
+    if(i<=1)
+    return 1;
+    else
+    return i*factorial(i-1);
 }
 
 int main(){
